@@ -48,12 +48,18 @@ namespace tournois
 
         #region Constructor
 
-        public Course()
+        public Course(equipe t1,equipe t2)
         {
-
+            this.Team1 = t1;
+            this.Team2 = t2;
         }
 
         #endregion
+
+        public override string ToString()
+        {
+            return string.Format(this.Team1.ToString() + " VS " + this.Team2.ToString());
+        }
 
         #endregion
     }

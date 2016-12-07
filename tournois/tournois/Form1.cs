@@ -42,6 +42,8 @@ namespace tournois
             this.Tournament = new Competition();
             GetPlayers();
             this.Tournament.GenerateTeams();
+            this.Tournament.GenerateMatchs();
+            this.lsbPlayers.DataSource = this.Tournament.Courses;
         }
 
         #endregion

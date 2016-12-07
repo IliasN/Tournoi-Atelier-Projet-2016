@@ -11,9 +11,21 @@ namespace tournois
         #region Fields
         private List<string> _player;
         private List<equipe> _teams;
+        private List<Course> _courses;
+        private int _currentCourse;
         #endregion
 
         #region Properties
+        public int CurrentCourse
+        {
+            get { return _currentCourse; }
+            set { _currentCourse = value; }
+        }
+        public List<Course> Courses
+        {
+            get { return _courses; }
+            set { _courses = value; }
+        }
         public List<string> Player
         {
             get { return _player; }
@@ -34,6 +46,8 @@ namespace tournois
         {
             this.Player = new List<string>();
             this.Teams = new List<equipe>();
+            this.Courses = new List<Course>();
+            this.CurrentCourse = 0;
         }
 
         #endregion
@@ -64,6 +78,23 @@ namespace tournois
                         this.Player.RemoveAt(p1);
                     }
                 }
+            }
+        }
+
+        public void GenerateMatchs()
+        {
+            if (this.Courses.Count == 0)
+            {
+                this.Courses.Add(new Course(this.Teams[0], this.Teams[1]));
+                this.Courses.Add(new Course(this.Teams[2], this.Teams[3]));
+                this.Courses.Add(new Course(this.Teams[4], this.Teams[0]));
+                this.Courses.Add(new Course(this.Teams[1], this.Teams[2]));
+                this.Courses.Add(new Course(this.Teams[3], this.Teams[4]));
+                this.Courses.Add(new Course(this.Teams[0], this.Teams[2]));
+                this.Courses.Add(new Course(this.Teams[1], this.Teams[3]));
+                this.Courses.Add(new Course(this.Teams[2], this.Teams[4]));
+                this.Courses.Add(new Course(this.Teams[0], this.Teams[3]));
+                this.Courses.Add(new Course(this.Teams[1], this.Teams[4]));
             }
         }
 

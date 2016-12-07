@@ -43,6 +43,11 @@ namespace tournois
         }
         #endregion
 
+        public override string ToString()
+        {
+            return string.Format(this.Player1 + " + " + this.Player2);
+        }
+
         #endregion
     }
 }
