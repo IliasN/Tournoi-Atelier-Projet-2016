@@ -1,0 +1,9 @@
+C:\Users\N'HAIRII_INFO\Desktop\tournois\tournois\bin\Debug\tournois.exe.config
+C:\Users\N'HAIRII_INFO\Desktop\tournois\tournois\bin\Debug\tournois.exe
+C:\Users\N'HAIRII_INFO\Desktop\tournois\tournois\bin\Debug\tournois.pdb
+C:\Users\N'HAIRII_INFO\Desktop\tournois\tournois\obj\Debug\tournois.csprojResolveAssemblyReference.cache
+C:\Users\N'HAIRII_INFO\Desktop\tournois\tournois\obj\Debug\tournois.frmMain.resources
+C:\Users\N'HAIRII_INFO\Desktop\tournois\tournois\obj\Debug\tournois.Properties.Resources.resources
+C:\Users\N'HAIRII_INFO\Desktop\tournois\tournois\obj\Debug\tournois.csproj.GenerateResource.Cache
+C:\Users\N'HAIRII_INFO\Desktop\tournois\tournois\obj\Debug\tournois.exe
+C:\Users\N'HAIRII_INFO\Desktop\tournois\tournois\obj\Debug\tournois.pdb
