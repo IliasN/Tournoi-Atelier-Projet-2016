@@ -45,7 +45,7 @@ namespace tournois
 
         public override string ToString()
         {
-            return string.Format(this.Player1 + " + " + this.Player2);
+            return string.Format(this.Player1 + " + " + this.Player2 + " : " + this.Points.ToString() + " pts");
         }
 
         #endregion

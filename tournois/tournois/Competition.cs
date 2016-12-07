@@ -52,6 +52,9 @@ namespace tournois
 
         #endregion
 
+        /// <summary>
+        /// Generate the teams from the list of players name
+        /// </summary>
         public void GenerateTeams()
         {
             Random rnd = new Random();
@@ -81,9 +84,12 @@ namespace tournois
             }
         }
 
+        /// <summary>
+        /// Generate the matchs for 8 or 10 players
+        /// </summary>
         public void GenerateMatchs()
         {
-            if (this.Courses.Count == 0)
+            if (this.Courses.Count == 0 && this.Teams.Count == 5)
             {
                 this.Courses.Add(new Course(this.Teams[0], this.Teams[1]));
                 this.Courses.Add(new Course(this.Teams[2], this.Teams[3]));
@@ -96,6 +102,59 @@ namespace tournois
                 this.Courses.Add(new Course(this.Teams[0], this.Teams[3]));
                 this.Courses.Add(new Course(this.Teams[1], this.Teams[4]));
             }
+            if (this.Courses.Count == 0 && this.Teams.Count == 4)
+            {
+                this.Courses.Add(new Course(this.Teams[0], this.Teams[1]));
+                this.Courses.Add(new Course(this.Teams[2], this.Teams[3]));
+                this.Courses.Add(new Course(this.Teams[1], this.Teams[2]));
+                this.Courses.Add(new Course(this.Teams[0], this.Teams[2]));
+                this.Courses.Add(new Course(this.Teams[1], this.Teams[3]));
+                this.Courses.Add(new Course(this.Teams[0], this.Teams[3]));
+            }
+        }
+
+        public string GetMJ()
+        {
+            Random rnd = new Random();
+            return this.Player[rnd.Next(0, this.Player.Count)];
+        }
+
+        /// <summary>
+        /// Set the current match to the first one and returns it
+        /// </summary>
+        /// <returns>The first match</returns>
+        public Course StartPools()
+        {
+            this.CurrentCourse = 0;
+            return this.Courses[this.CurrentCourse];
+        }
+
+        /// <summary>
+        /// Increment the current match and returns it, sort the list of team when all matchs are done
+        /// </summary>
+        /// <returns>The current match or null if the pool match are over</returns>
+        public Course NextCourse()
+        {
+            UpdateTeamScore();
+            this.CurrentCourse++;
+            if (this.CurrentCourse < this.Courses.Count - 1)
+            {
+                return this.Courses[this.CurrentCourse];
+            }
+            else
+            {
+                this.Teams = this.Teams.OrderBy(equipe => equipe.Points).ToList();
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Add the result of a match to the score of a team
+        /// </summary>
+        public void UpdateTeamScore()
+        {
+            this.Courses[this.CurrentCourse].Team1.Points += this.Courses[this.CurrentCourse].Team1Score;
+            this.Courses[this.CurrentCourse].Team2.Points += this.Courses[this.CurrentCourse].Team2Score;
         }
 
         #endregion

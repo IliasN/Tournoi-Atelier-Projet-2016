@@ -41,9 +41,10 @@ namespace tournois
             this.Reader = new StreamReader("players.txt",Encoding.Default);
             this.Tournament = new Competition();
             GetPlayers();
+            this.lblMj.Text = "Map Jockey : " + this.Tournament.GetMJ();
             this.Tournament.GenerateTeams();
             this.Tournament.GenerateMatchs();
-            this.lsbPlayers.DataSource = this.Tournament.Courses;
+            this.lsbTeams.DataSource = this.Tournament.Teams;
         }
 
         #endregion
@@ -61,7 +62,7 @@ namespace tournois
                 line = this.Reader.ReadLine();
             }
             this.Tournament.Player = tmpPlayers;
-            this.lsbPlayers.DataSource = this.Tournament.Player;
+            this.lsbTeams.DataSource = this.Tournament.Player;
         }
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -71,6 +72,24 @@ namespace tournois
             {
                 e.Cancel = true;
             }
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            btnStart.Enabled = false;
+            Course match = this.Tournament.StartPools();
+            while (match != null)
+            {
+                frmMatch matchWindow = new frmMatch(match);
+                matchWindow.ShowDialog();
+                lsbResults.Items.Add(match);
+                this.Tournament.Courses[this.Tournament.CurrentCourse] = matchWindow.CurrentMatch;
+                match = this.Tournament.NextCourse();
+                this.lsbTeams.DataSource = null;
+                this.lsbTeams.DataSource = this.Tournament.Teams;
+            }
+            this.lsbTeams.DataSource = null;
+            this.lsbTeams.DataSource = this.Tournament.Teams;
         }
 
         #endregion
