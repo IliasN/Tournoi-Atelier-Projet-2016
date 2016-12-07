@@ -39,13 +39,17 @@ namespace tournois
         {
             InitializeComponent();
             this.Reader = new StreamReader("players.txt",Encoding.Default);
-            ReadFile();
             this.Tournament = new Competition();
+            GetPlayers();
+            this.Tournament.GenerateTeams();
         }
 
         #endregion
 
-        public void ReadFile()
+        /// <summary>
+        /// Get the players name from the text file "players.txt"
+        /// </summary>
+        public void GetPlayers()
         {
             List<string> tmpPlayers = new List<string>();
             string line = this.Reader.ReadLine();
@@ -54,7 +58,7 @@ namespace tournois
                 tmpPlayers.Add(line);
                 line = this.Reader.ReadLine();
             }
-            this.Tournament.Player = tmpPlayers.ToArray();
+            this.Tournament.Player = tmpPlayers;
             this.lsbPlayers.DataSource = this.Tournament.Player;
         }
 
