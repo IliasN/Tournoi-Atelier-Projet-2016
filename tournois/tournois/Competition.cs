@@ -119,6 +119,10 @@ namespace tournois
             }
         }
 
+        /// <summary>
+        /// Return a random player to be the mapJockey
+        /// </summary>
+        /// <returns></returns>
         public string GetMJ()
         {
             Random rnd = new Random();

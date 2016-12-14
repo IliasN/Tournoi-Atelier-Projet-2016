@@ -85,6 +85,11 @@ namespace tournois
             }
         }
 
+        /// <summary>
+        /// Go through all the matchs and show a window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnStart_Click(object sender, EventArgs e)
         {
             btnStart.Enabled = false;
@@ -104,6 +109,11 @@ namespace tournois
             btnStartFinals.Enabled = true;
         }
 
+        /// <summary>
+        /// Start the final round
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnStartFinals_Click(object sender, EventArgs e)
         {
             frmTree tree = new frmTree(this.Tournament);

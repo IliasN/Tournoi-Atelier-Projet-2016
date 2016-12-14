@@ -44,6 +44,11 @@ namespace tournois
 
         #endregion
 
+        /// <summary>
+        /// Close the application and set the scores
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAccept_Click(object sender, EventArgs e)
         {
             this.CurrentMatch.Team1Score = (int)nudTeam1.Value;

@@ -72,6 +72,9 @@ namespace tournois
             return string.Format(this.Team1Score + " pts : " + this.Team1.GetName() + " VS " + this.Team2.GetName() + " : " + this.Team2Score + " pts sur la carte : " + this.Map);
         }
 
+        /// <summary>
+        /// Return the winner of the race
+        /// </summary>
         public equipe GetWinner()
         {
             if (this.Team1Score > this.Team2Score)
@@ -79,6 +82,9 @@ namespace tournois
             return this.Team2;
         }
 
+        /// <summary>
+        /// Return the looser of the race
+        /// </summary>
         public equipe GetLooser()
         {
             if (this.Team1Score < this.Team2Score)

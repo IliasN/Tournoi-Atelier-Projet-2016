@@ -54,6 +54,10 @@ namespace tournois
             return string.Format(this.Player1 + " + " + this.Player2 + " : " + this.Points.ToString() + " pts");
         }
 
+        /// <summary>
+        /// Return the name
+        /// </summary>
+        /// <returns>The name</returns>
         public string GetName()
         {
             return string.Format(this.Player1 + " + " + this.Player2);

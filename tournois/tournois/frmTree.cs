@@ -72,6 +72,9 @@ namespace tournois
 
         #endregion
 
+        /// <summary>
+        /// Start the matchs of the final phase for 8 or 10 players
+        /// </summary>
         public void StartTree()
         {
             if (this.Results.Count == 5)
@@ -130,6 +133,11 @@ namespace tournois
             }
         }
 
+        /// <summary>
+        /// Ask the user if he wants to quit
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmTree_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Voulez vous vraiment quitter l'application ?", "Êtes vous sur ?", MessageBoxButtons.YesNo);
@@ -139,6 +147,11 @@ namespace tournois
             }
         }
 
+        /// <summary>
+        /// Start the matchs
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnStart_Click(object sender, EventArgs e)
         {
             StartTree();
