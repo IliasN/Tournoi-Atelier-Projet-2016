@@ -6,3 +6,5 @@ Kilian
 Ricardo
 Christophe
 Guntrim
+Tiago
+Miguel

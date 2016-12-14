@@ -17,3 +17,4 @@ C:\Users\N'HAIRII_INFO\Tournoi-Atelier-Projet-2016\tournois\tournois\obj\Debug\t
 C:\Users\N'HAIRII_INFO\Tournoi-Atelier-Projet-2016\tournois\tournois\obj\Debug\tournois.csproj.GenerateResource.Cache
 C:\Users\N'HAIRII_INFO\Tournoi-Atelier-Projet-2016\tournois\tournois\obj\Debug\tournois.frmMatch.resources
 C:\Users\N'HAIRII_INFO\Tournoi-Atelier-Projet-2016\tournois\tournois\obj\Debug\tournois.frmTree.resources
+C:\Users\N'HAIRII_INFO\Tournoi-Atelier-Projet-2016\tournois\tournois\obj\Debug\tournois.csprojResolveAssemblyReference.cache

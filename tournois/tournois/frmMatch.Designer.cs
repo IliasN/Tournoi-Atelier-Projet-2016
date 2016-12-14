@@ -156,7 +156,7 @@
             this.AcceptButton = this.btnAccept;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 187);
+            this.ClientSize = new System.Drawing.Size(620, 187);
             this.Controls.Add(this.cmbMap);
             this.Controls.Add(this.nudTeam2);
             this.Controls.Add(this.nudTeam1);
@@ -169,6 +169,7 @@
             this.Name = "frmMatch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Match";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMatch_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.nudTeam1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTeam2)).EndInit();
             this.ResumeLayout(false);

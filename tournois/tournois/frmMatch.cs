@@ -51,12 +51,29 @@ namespace tournois
         /// <param name="e"></param>
         private void btnAccept_Click(object sender, EventArgs e)
         {
-            this.CurrentMatch.Team1Score = (int)nudTeam1.Value;
-            this.CurrentMatch.Team2Score = (int)nudTeam2.Value;
-            this.CurrentMatch.Map = cmbMap.Text;
-            this.Close();
+            if (nudTeam1.Value > 0 && nudTeam2.Value > 0 && cmbMap.Text != "" && nudTeam1.Value != nudTeam2.Value)
+            {
+                this.CurrentMatch.Team1Score = (int)nudTeam1.Value;
+                this.CurrentMatch.Team2Score = (int)nudTeam2.Value;
+                this.CurrentMatch.Map = cmbMap.Text;
+                this.Close();
+            }
         }
 
-        #endregion
+        /// <summary>
+        /// Verify if data is correct
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void frmMatch_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Le résultat du match est-il correcte ?", "Êtes vous sur ?", MessageBoxButtons.YesNo);
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        #endregion        
     }
 }

@@ -146,10 +146,11 @@ namespace tournois
         public Course NextCourse()
         {
             UpdateTeamScore();
-            this.CurrentCourse++;
             if (this.CurrentCourse < this.Courses.Count - 1)
             {
-                return this.Courses[this.CurrentCourse];
+                Course tmp = this.Courses[this.CurrentCourse];
+                this.CurrentCourse++;
+                return tmp;
             }
             else
             {
