@@ -34,6 +34,7 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.lsbResults = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnStartFinals = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lsbTeams
@@ -69,7 +70,7 @@
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(284, 58);
             this.btnStart.TabIndex = 3;
-            this.btnStart.Text = "Commencer le tournoi!";
+            this.btnStart.Text = "Commencer le tournoi !";
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
@@ -90,11 +91,23 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Résultat des matchs :";
             // 
+            // btnStartFinals
+            // 
+            this.btnStartFinals.Enabled = false;
+            this.btnStartFinals.Location = new System.Drawing.Point(306, 424);
+            this.btnStartFinals.Name = "btnStartFinals";
+            this.btnStartFinals.Size = new System.Drawing.Size(284, 58);
+            this.btnStartFinals.TabIndex = 6;
+            this.btnStartFinals.Text = "Commencer la phase finale !";
+            this.btnStartFinals.UseVisualStyleBackColor = true;
+            this.btnStartFinals.Click += new System.EventHandler(this.btnStartFinals_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 494);
+            this.Controls.Add(this.btnStartFinals);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lsbResults);
             this.Controls.Add(this.btnStart);
@@ -118,6 +131,7 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.ListBox lsbResults;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnStartFinals;
     }
 }
 

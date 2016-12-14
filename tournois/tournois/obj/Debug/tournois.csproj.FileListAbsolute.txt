@@ -12,8 +12,8 @@ C:\Users\N'HAIRII_INFO\Tournoi-Atelier-Projet-2016\tournois\tournois\obj\Debug\t
 C:\Users\N'HAIRII_INFO\Tournoi-Atelier-Projet-2016\tournois\tournois\obj\Debug\tournois.pdb
 C:\Users\N'HAIRII_INFO\Tournoi-Atelier-Projet-2016\tournois\tournois\bin\Debug\tournois.exe
 C:\Users\N'HAIRII_INFO\Tournoi-Atelier-Projet-2016\tournois\tournois\bin\Debug\tournois.pdb
-C:\Users\N'HAIRII_INFO\Tournoi-Atelier-Projet-2016\tournois\tournois\obj\Debug\tournois.csprojResolveAssemblyReference.cache
 C:\Users\N'HAIRII_INFO\Tournoi-Atelier-Projet-2016\tournois\tournois\obj\Debug\tournois.frmMain.resources
 C:\Users\N'HAIRII_INFO\Tournoi-Atelier-Projet-2016\tournois\tournois\obj\Debug\tournois.Properties.Resources.resources
 C:\Users\N'HAIRII_INFO\Tournoi-Atelier-Projet-2016\tournois\tournois\obj\Debug\tournois.csproj.GenerateResource.Cache
 C:\Users\N'HAIRII_INFO\Tournoi-Atelier-Projet-2016\tournois\tournois\obj\Debug\tournois.frmMatch.resources
+C:\Users\N'HAIRII_INFO\Tournoi-Atelier-Projet-2016\tournois\tournois\obj\Debug\tournois.frmTree.resources

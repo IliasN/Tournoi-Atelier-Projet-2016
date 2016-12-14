@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Nom : Ilias N'hairi, Dylan Schito
+ * Date : 14.12.2016
+ * Version : 1.0
+ * Description : Application de gestion de tournoi dans le cadre de l'atelier projet
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

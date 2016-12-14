@@ -81,8 +81,6 @@
             // 
             // lblTeam2
             // 
-            this.lblTeam2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTeam2.AutoSize = true;
             this.lblTeam2.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTeam2.Location = new System.Drawing.Point(319, 9);

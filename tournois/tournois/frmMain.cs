@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Nom : Ilias N'hairi, Dylan Schito
+ * Date : 14.12.2016
+ * Version : 1.0
+ * Description : Application de gestion de tournoi dans le cadre de l'atelier projet
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -65,6 +71,11 @@ namespace tournois
             this.lsbTeams.DataSource = this.Tournament.Player;
         }
 
+        /// <summary>
+        /// Verify that the user meant to exit the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Voulez vous vraiment quitter l'application ?", "Êtes vous sur ?",MessageBoxButtons.YesNo);
@@ -90,8 +101,19 @@ namespace tournois
             }
             this.lsbTeams.DataSource = null;
             this.lsbTeams.DataSource = this.Tournament.Teams;
+            btnStartFinals.Enabled = true;
+        }
+
+        private void btnStartFinals_Click(object sender, EventArgs e)
+        {
+            frmTree tree = new frmTree(this.Tournament);
+            tree.ShowDialog();
         }
 
         #endregion
+
+        
+
+       
     }
 }

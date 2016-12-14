@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Nom : Ilias N'hairi, Dylan Schito
+ * Date : 14.12.2016
+ * Version : 1.0
+ * Description : Application de gestion de tournoi dans le cadre de l'atelier projet
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -54,11 +60,30 @@ namespace tournois
             this.Team2 = t2;
         }
 
+        public Course():this(null,null)
+        {
+
+        }
+
         #endregion
 
         public override string ToString()
         {
-            return string.Format(this.Team1Score + " pts : " + this.Team1.ToString() + " VS " + this.Team2.ToString() + " : " + this.Team2Score + " pts");
+            return string.Format(this.Team1Score + " pts : " + this.Team1.GetName() + " VS " + this.Team2.GetName() + " : " + this.Team2Score + " pts sur la carte : " + this.Map);
+        }
+
+        public equipe GetWinner()
+        {
+            if (this.Team1Score > this.Team2Score)
+                return this.Team1;
+            return this.Team2;
+        }
+
+        public equipe GetLooser()
+        {
+            if (this.Team1Score < this.Team2Score)
+                return this.Team1;
+            return this.Team2;
         }
 
         #endregion

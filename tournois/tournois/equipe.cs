@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Nom : Ilias N'hairi, Dylan Schito
+ * Date : 14.12.2016
+ * Version : 1.0
+ * Description : Application de gestion de tournoi dans le cadre de l'atelier projet
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,6 +52,11 @@ namespace tournois
         public override string ToString()
         {
             return string.Format(this.Player1 + " + " + this.Player2 + " : " + this.Points.ToString() + " pts");
+        }
+
+        public string GetName()
+        {
+            return string.Format(this.Player1 + " + " + this.Player2);
         }
 
         #endregion
